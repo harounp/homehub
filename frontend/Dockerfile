@@ -1,5 +1,5 @@
 # Use an official node runtime as a parent image
-FROM node:8
+FROM node:13
 
 WORKDIR /app/
 
