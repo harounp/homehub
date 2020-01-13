@@ -1,4 +1,4 @@
-import { Google, Amazon, Facebook } from "grommet-icons";
+import * as Icons from "grommet-icons";
 
 export const THEME = {
   global: {
@@ -12,19 +12,19 @@ export const THEME = {
 }
 
 export const TESTCARD1 = {
-  "text": "Google",
+  "title": "Google",
   "url": "https://www.google.com",
-  "icon": Google
+  "icon": Icons.Google
 }
 export const TESTCARD2 = {
-  "text": "Amazon",
+  "title": "Amazon",
   "url": "https://www.amazon.com",
-  "icon": Amazon
+  "icon": Icons.Amazon
 }
 export const TESTCARD3 = {
-  "text": "Facebook",
+  "title": "Facebook",
   "url": "https://www.facebook.com",
-  "icon": Facebook
+  "icon": Icons.Facebook
 }
 
 export const TESTCARDS = [TESTCARD1,TESTCARD2,TESTCARD3]
