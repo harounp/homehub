@@ -2,7 +2,9 @@
   "name": "hello-world",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8000",
   "dependencies": {
+    "algoliasearch": "^3.35.1",
     "axios": "^0.19.0",
     "grommet": "^2.9.0",
     "grommet-icons": "^4.4.0",
@@ -10,7 +12,8 @@
     "react-dom": "^16.12.0",
     "react-gesture-responder": "^2.1.0",
     "react-grid-dnd": "^2.1.1",
-    "react-scripts": "3.2.0",
+    "react-instantsearch-dom": "^6.1.0",
+    "react-scripts": "^3.3.0",
     "styled-components": "^4.4.1"
   },
   "scripts": {

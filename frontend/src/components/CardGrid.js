@@ -3,6 +3,7 @@ import Card from './Card'
 import { GridContextProvider, GridDropZone, GridItem, swap} from "react-grid-dnd";
 import {TESTCARDS, THEME} from '../constants'
 import {Grommet, Box} from 'grommet'
+// import Axios from '../api/Manager'
 
 export default function CardGrid() {
   const [cards, setCards] = React.useState(TESTCARDS); 
@@ -14,9 +15,9 @@ export default function CardGrid() {
 
   return (
     <Grommet theme={THEME}> 
-      <Box pad="large" gap="medium">
+      <Box pad="medium" gap="medium">
         <GridContextProvider onChange={onChange}>
-          <GridDropZone id="cards" boxesPerRow={6} rowHeight={100} style={{ height: "400px" }}>
+          <GridDropZone id="cards" boxesPerRow={6} rowHeight={50} style={{ height: "200px" }}>
             {cards.map(card => (
               <GridItem key={card} justify="center" align="center">
                 <Card {...card}/>

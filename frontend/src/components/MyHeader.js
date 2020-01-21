@@ -7,7 +7,7 @@ class MyHeader extends React.Component{
   render(){
     return (
       <Grommet theme={THEME}>
-        <Header background="dark-2" pad="small" round={{corner: "bottom", size: "small"}}>
+        <Header background="dark-1" pad="small" round={{corner: "bottom", size: "small"}}>
           <Box direction="row" gap="medium">
             <Anchor label="Home" href="#" />
             <Anchor label="Test" href="#" />
