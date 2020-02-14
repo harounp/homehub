@@ -1,8 +1,7 @@
 import React from 'react'
 import { Layer, Select , Form, FormField, TextInput, Grommet , Box, Button, Anchor} from 'grommet'
-import {THEME} from "../constants"
+import {THEME, ICON_OPTIONS} from "../constants"
 import {Add} from "grommet-icons"
-import * as Icons from "grommet-icons"
 import axios from '../api/Manager'
 
 function NewCard() {
@@ -42,24 +41,16 @@ function NewCard() {
 function CreateCard(){
   const title = document.querySelector('#title').value
   const url = document.querySelector('#url').value
-  const icon = 'Test'
+  const icon = document.querySelector('#icon').value
   axios.post('/', {
     title: title,
     url: url,
     icon: icon
   })
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
 }
 function IconSelect() {
   return (
-    <Select
-      options={Icons}
-    />
+    <Select options={ICON_OPTIONS} />
   );
 }
 
