@@ -24,9 +24,9 @@ const CardGrid = () => {
     <Grommet theme={THEME}> 
       <Box pad="medium" gap="medium">
         <GridContextProvider onChange={onChange}>
-          <GridDropZone id="cards" boxesPerRow={6} rowHeight={50} style={{ height: "200px" }}>
+          <GridDropZone id="cards" boxesPerRow={6} rowHeight={200} style={{ height: "200px" }}>
             {cards && cards.length > 0 && cards.map(card => (
-              <GridItem key={card.id} justify="center" align="center">
+              <GridItem key={card.id} >
                 <Card {...card}/>
               </GridItem>
             ))}

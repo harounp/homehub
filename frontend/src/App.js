@@ -7,8 +7,8 @@ function App() {
   return (
     <div> 
       <Header />
-      <CardGrid />
       <NewCard />
+      <CardGrid />
     </div>
   )
 }

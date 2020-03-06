@@ -1,15 +1,16 @@
 import React from 'react'
-import { Layer, Select , Form, FormField, TextInput, Grommet , Box, Button, Anchor} from 'grommet'
-import {THEME, ICON_OPTIONS} from "../constants"
+import { Layer, Form, FormField, TextInput, Grommet , Box, Button, Anchor} from 'grommet'
+import {THEME} from "../constants"
 import {Add} from "grommet-icons"
 import axios from '../api/Manager'
+import IconSearch from './IconSearch'
 
 function NewCard() {
   const [show, setShow] = React.useState(); 
   return (
     <Grommet theme={THEME}>
-      <Box align="center">
-        <Box width="xsml" height="xsml" pad="medium" align="center" 
+      <Box align="center" pad="xsmall" gap="xsmall" >
+        <Box width="xsml" height="xsml" pad="small" align="center" 
         background="dark-3" round gap="small" onClick={() => setShow(true)}>
           <Add size="large" />
           <Anchor label="New Card" size="large"/>
@@ -22,36 +23,31 @@ function NewCard() {
                   <TextInput id="title" placeholder="ex: Google" />
                 </FormField>
                 <FormField label="Website URL">
-                  <TextInput id="url" placeholder="ex: https://www.google.com" />
+                  <TextInput id="url" value="https://www." />
                 </FormField>
                 <FormField label="Card Icon">
-                  <IconSelect id="icon"/>
+                  <IconSearch />
                 </FormField>
                 <Button type="submit"  label="Create Card" 
-                onClick={() => {CreateCard(); setShow(false);}}
+                  onClick={() => {CreateCard(); setShow(false);}}
                 />
               </Form>
             </Box>
           </Layer>
         )}
       </Box>
-    </ Grommet>
+    </Grommet>
   )
 }
 function CreateCard(){
   const title = document.querySelector('#title').value
   const url = document.querySelector('#url').value
-  const icon = document.querySelector('#icon').value
+  const icon = document.querySelector('#icon__input').value
   axios.post('/', {
     title: title,
     url: url,
     icon: icon
   })
-}
-function IconSelect() {
-  return (
-    <Select options={ICON_OPTIONS} />
-  );
 }
 
 export default NewCard
