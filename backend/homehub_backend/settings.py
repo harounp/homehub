@@ -13,7 +13,7 @@ SECRET_KEY = '+nj8^ul!ihghw2i9)-ytvet=*sf8kzl$ryx_1@ae(q@c)3lm8l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost"]
+ALLOWED_HOSTS = ["localhost", '192.168.0.42']
 
 
 # Application definition
@@ -41,7 +41,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'http://192.168.0.42:3000'
 ]
 ROOT_URLCONF = 'homehub_backend.urls'
 
