@@ -36,11 +36,13 @@ function CreateCard(){
   const title = document.querySelector('#title').value
   const url = document.querySelector('#url').value
   const icon = document.querySelector('#icon__input').value
-  axios.post('/', {
+  card = {
     title: title,
     url: url,
     icon: icon
-  })
+  }
+  axios.post('/', card)
+  super.AddCard()
 }
 
 export default NewCard

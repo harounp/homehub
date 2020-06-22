@@ -11,8 +11,8 @@ export default class Card extends React.Component{
       </>
     )
   }
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       isMouseInside: false
     };
@@ -25,6 +25,9 @@ export default class Card extends React.Component{
   }
   DeleteCard(id){
     axios.delete('/'+id)
+    this.setState(this.props.cards.filter(function( card ) {
+      return card.id !== id;
+    }))
   }
 
   renderCard(cardData){

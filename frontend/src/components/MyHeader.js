@@ -22,6 +22,10 @@ class MyHeader extends React.Component{
       </Grommet>
     )
   }
+
+  AddCard(){
+    
+  }
 }
 
 export default MyHeader
